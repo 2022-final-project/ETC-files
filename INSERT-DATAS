@@ -1,39 +1,41 @@
 COPY public.nation(N_NATIONKEY,N_NAME,N_REGIONKEY,N_COMMENT,N_dummy)
-FROM '/mnt/c/Users/johoo/TPC-H_Tools_v3.0.0/dbgen/nation.tbl'
+FROM '/..절대경로../TPC-H_Tools_v3.0.0/dbgen/nation.tbl'
 DELIMITER '|'
 ;
 
 COPY public.region(R_REGIONKEY,R_NAME,R_COMMENT,R_DUMMY)
-FROM '/mnt/c/Users/johoo/TPC-H_Tools_v3.0.0/dbgen/region.tbl'
+FROM '/..절대경로../TPC-H_Tools_v3.0.0/dbgen/region.tbl'
 DELIMITER '|'
 ;
 
 COPY public.part(P_PARTKEY,P_NAME,P_MFGR,P_BRAND,P_TYPE,P_SIZE,P_CONTAINER,P_RETAILPRICE,P_COMMENT,P_DUMMY)
-FROM '/mnt/c/Users/johoo/TPC-H_Tools_v3.0.0/dbgen/part.tbl'
+FROM '/..절대경로../TPC-H_Tools_v3.0.0/dbgen/part.tbl'
 DELIMITER '|'
 ;
 
 COPY public.supplier(S_SUPPKEY,S_NAME,S_ADDRESS,S_NATIONKEY,S_PHONE,S_ACCTBAL,S_COMMENT, S_DUMMY)
-FROM '/mnt/c/Users/johoo/TPC-H_Tools_v3.0.0/dbgen/supplier.tbl'
+FROM '/..절대경로../TPC-H_Tools_v3.0.0/dbgen/supplier.tbl'
 DELIMITER '|'
 ;
 
 COPY public.partsupp(PS_PARTKEY,PS_SUPPKEY,PS_AVAILQTY,PS_SUPPLYCOST,PS_COMMENT,PS_DUMMY)
-FROM '/mnt/c/Users/johoo/TPC-H_Tools_v3.0.0/dbgen/partsupp.tbl'
+FROM '/..절대경로../TPC-H_Tools_v3.0.0/dbgen/partsupp.tbl'
 DELIMITER '|'
 ;
 
 COPY public.customer(C_CUSTKEY,C_NAME,C_ADDRESS,C_NATIONKEY,C_PHONE,C_ACCTBAL,C_MKTSEGMENT,C_COMMENT,C_dummy)
-FROM '/mnt/c/Users/johoo/TPC-H_Tools_v3.0.0/dbgen/customer.tbl'
+FROM '/..절대경로../TPC-H_Tools_v3.0.0/dbgen/customer.tbl'
 DELIMITER '|'
 ;
                            
 COPY public.orders(O_ORDERKEY,O_CUSTKEY,O_ORDERSTATUS,O_TOTALPRICE,O_ORDERDATE,O_ORDERPRIORITY,O_CLERK,O_SHIPPRIORITY,O_COMMENT,O_DUMMY)
-FROM '/mnt/c/Users/johoo/TPC-H_Tools_v3.0.0/dbgen/orders.tbl'
+FROM '/..절대경로../TPC-H_Tools_v3.0.0/dbgen/orders.tbl'
 DELIMITER '|'
 ;
 
 COPY public.lineitem(L_ORDERKEY,L_PARTKEY,L_SUPPKEY,L_LINENUMBER,L_QUANTITY,L_EXTENDEDPRICE,L_DISCOUNT,L_TAX,L_RETURNFLAG,L_LINESTATUS,L_SHIPDATE,L_COMMITDATE,L_RECEIPTDATE,L_SHIPINSTRUCT,L_SHIPMODE,L_COMMENT,L_DUMMY)
-FROM '/mnt/c/Users/johoo/TPC-H_Tools_v3.0.0/dbgen/lineitem.tbl'
+FROM '/..절대경로../TPC-H_Tools_v3.0.0/dbgen/lineitem.tbl'
 DELIMITER '|'
 ;
+
+// powershell 에서 현재 위치로 절대경로 파악할 수 있으니까 저 절대경로 부분만 사용해서 쓰시면 됩니다!
